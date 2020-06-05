@@ -15,6 +15,4 @@ blocks:
             - cache restore
             - npm install newman
             - npm run build --if-present
-            - 'newman run '
-            - 'https://www.getpostman.com/collections/1c5476cd7ac119a06eba'
-            - '?apikey={PMAK-5ed74e4e0268c60043c772e2-e7959d16143de879a22c1bbceab45896f3}'
+            - newman run VHL.postman_collection.json
