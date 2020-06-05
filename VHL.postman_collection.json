@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "https://lti-gateway-testing.s3.amazonaws.com/lti-client.html",
+			"name": "VHL LTI",
 			"event": [
 				{
 					"listen": "test",
@@ -16,7 +16,20 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
-							"});"
+							"});\r",
+							"\r",
+							"// pm.test(\"Your test name\", function () {\r",
+							"\r",
+							"//     var jsonObject = xml2Json(responseBody);\r",
+							"//     console.log(jsonObject[0])\r",
+							"//     pm.expect(jsonObject).to.eql(100);\r",
+							"    \r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Body matches string\", function () {\r",
+							"//     pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");\r",
+							"// });\r",
+							""
 						],
 						"type": "text/javascript"
 					}
