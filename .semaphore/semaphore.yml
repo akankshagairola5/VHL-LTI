@@ -14,7 +14,7 @@ blocks:
         - name: 'VHL Postman Collection '
           commands:
             - checkout
-            - sem-version node 12
+            - sem-version node 10
             - cache restore
             - npm install
             - npm run test
