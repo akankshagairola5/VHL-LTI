@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "4748cdae-5614-48f0-b40d-0681e6fdb3fa",
+		"name": "VHL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://lti-gateway-testing.s3.amazonaws.com/lti-client.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e6d7d538-cf47-40c6-9c34-8360cbb42ab6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8cc00067-e21c-412d-8794-41c5537495df",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followOriginalHttpMethod": false,
+				"followRedirects": false
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "yr34r43ry",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "demo",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "context_id",
+							"value": "295fe4f8b98aed7d17ce91c3ab5ad737d8483ab4",
+							"type": "text"
+						},
+						{
+							"key": "context_label",
+							"value": "DLS",
+							"type": "text"
+						},
+						{
+							"key": "lti_message_type",
+							"value": "basic-lti-launch-request",
+							"type": "text"
+						},
+						{
+							"key": "lti_version",
+							"value": "LTI-1p0",
+							"type": "text"
+						},
+						{
+							"key": "resource_link_id",
+							"value": "88391-e1919-bb3456",
+							"type": "text"
+						},
+						{
+							"key": "roles",
+							"value": "Learner",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "292832126",
+							"type": "text"
+						},
+						{
+							"key": "context_title",
+							"value": "DLS Reader Test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://reader.vhlcentral.com/demo/student-edition/comproqa_seneros_1b",
+					"protocol": "https",
+					"host": [
+						"reader",
+						"vhlcentral",
+						"com"
+					],
+					"path": [
+						"demo",
+						"student-edition",
+						"comproqa_seneros_1b"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
