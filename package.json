@@ -1,0 +1,15 @@
+{
+  "name": "testPostman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "newman run VHL.postman_collection.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^5.0.1"
+  }
+}
