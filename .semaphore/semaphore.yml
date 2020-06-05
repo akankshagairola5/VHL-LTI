@@ -15,3 +15,14 @@ blocks:
             - cache restore
             - npm install newman
             - newman run VHL.postman_collection.json
+  - name: 'Block #2 Newman run collection'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - checkout
+            - sem-version node 12
+            - npm install -g newman;
+        - name: 'Job #2'
+          commands:
+            - newman run VHL.postman_collection.json
